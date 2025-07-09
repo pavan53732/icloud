@@ -1,0 +1,19 @@
+[
+  {
+    "base": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+    "baseSymbol": "USDC",
+    "baseDecimals": 6,
+    "pair": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+    "pairSymbol": "DAI",
+    "pairDecimals": 18
+  },
+  {
+    "base": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+    "baseSymbol": "WETH",
+    "baseDecimals": 18,
+    "pair": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+    "pairSymbol": "USDC",
+    "pairDecimals": 6
+  }
+  // ... (add more pairs as needed or use updatePairs.js)
+]

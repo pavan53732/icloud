@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polygon Arbitrage Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1b1b1b; color: #fff; }
+        h1 { color: #4ce6ad; }
+        .metrics, .logs, .routes { margin-bottom: 2em; }
+        pre { background: #292929; color: #fafafa; padding: 1em; border-radius: 8px; }
+        canvas { background: #fff; border-radius: 8px; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Polygon Arbitrage Dashboard</h1>
+<div class="metrics">
+    <h2>Performance Metrics</h2>
+    <pre id="metrics"></pre>
+</div>
+<div class="routes">
+    <h2>Last Arbitrage Routes (Top 10)</h2>
+    <canvas id="routeChart" width="800" height="300"></canvas>
+</div>
+<div class="logs">
+    <h2>Recent Trade Logs</h2>
+    <pre id="logs"></pre>
+</div>
+<script>
+async function updateMetrics() {
+    const res = await fetch('/metrics');
+    const data = await res.json();
+    document.getElementById('metrics').innerText = JSON.stringify(data, null, 2);
+}
+async function updateLogs() {
+    const res = await fetch('/logs');
+    const data = await res.text();
+    document.getElementById('logs').innerText = data.split('\n').slice(-20).join('\n');
+}
+async function updateRoutes() {
+    const res = await fetch('/routes');
+    const routes = await res.json();
+    const ctx = document.getElementById('routeChart').getContext('2d');
+    const top = routes.slice(-10);
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: top.map(r => `${r.pair} ${r.dex1}->${r.dex2}`),
+            datasets: [{
+                label: "Profit (USD)",
+                data: top.map(r => r.profitUsd),
+                backgroundColor: top.map(r => r.profitUsd > 0 ? 'rgba(76,230,173,0.4)' : 'rgba(255,99,132,0.4)')
+            }]
+        },
+        options: { scales: { y: { beginAtZero: true } } }
+    });
+}
+updateMetrics(); updateLogs(); updateRoutes();
+setInterval(updateMetrics, 10000);
+setInterval(updateLogs, 10000);
+setInterval(updateRoutes, 30000);
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "rpcUrl": "https://polygon-rpc.com",
+  "botAddress": "YOUR_DEPLOYED_CONTRACT_ADDRESS",
+  "gasLimit": 2500000,
+  "chainlinkGasOracle": "0xAB594600376Ec9fD91F8e885dADF0CE036862dE0",
+  "intervalMs": 60000,
+  "minLiquidityUsd": 20000,
+  "stablecoin": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+}
