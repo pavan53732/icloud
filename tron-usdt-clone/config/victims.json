@@ -1,0 +1,66 @@
+{
+    "victims": [
+        {
+            "address": "TXXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx",
+            "type": "whale",
+            "initialBalance": "10000000000000",
+            "trustLevel": 80,
+            "greedIndex": 70,
+            "fearFactor": 20,
+            "awarenessLevel": 10,
+            "notes": "High-value target, low awareness"
+        },
+        {
+            "address": "TYYyYyYyYyYyYyYyYyYyYyYyYyYyYyYy",
+            "type": "trader",
+            "initialBalance": "1000000000000",
+            "trustLevel": 60,
+            "greedIndex": 90,
+            "fearFactor": 40,
+            "awarenessLevel": 30,
+            "notes": "Active trader, medium awareness"
+        },
+        {
+            "address": "TZZzZzZzZzZzZzZzZzZzZzZzZzZzZzZz",
+            "type": "holder",
+            "initialBalance": "5000000000000",
+            "trustLevel": 70,
+            "greedIndex": 40,
+            "fearFactor": 30,
+            "awarenessLevel": 20,
+            "notes": "Long-term holder, passive"
+        }
+    ],
+    "dapps": [
+        {
+            "name": "Stake.com",
+            "address": "TAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "type": "gambling",
+            "depositContract": "TBBBbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "hotWallet": "TCCCcccccccccccccccccccccccccccc",
+            "minDeposit": 10000000,
+            "maxDeposit": 10000000000
+        },
+        {
+            "name": "JustLend",
+            "address": "TDDDdddddddddddddddddddddddddddd",
+            "type": "lending",
+            "depositFunction": "deposit",
+            "withdrawFunction": "withdraw"
+        }
+    ],
+    "analysts": [
+        {
+            "address": "TEEEeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "service": "TronScan",
+            "type": "explorer",
+            "threat": "high"
+        },
+        {
+            "address": "TFFFffffffffffffffffffffffffffff",
+            "service": "ChainAnalysis",
+            "type": "forensics",
+            "threat": "critical"
+        }
+    ]
+}
